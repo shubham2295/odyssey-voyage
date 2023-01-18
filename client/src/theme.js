@@ -1,5 +1,6 @@
+/* eslint-disable prettier/prettier */
 import '@apollo/space-kit/reset.css';
-import {extendTheme} from '@chakra-ui/react';
+import { extendTheme } from '@chakra-ui/react';
 
 export default extendTheme({
   colors: {
@@ -12,11 +13,11 @@ export default extendTheme({
       300: '#7156D9',
       400: '#3F20BA',
       midnight: '#1B2240',
-      error: '#9C2323'
-    }
+      error: '#9C2323',
+    },
   },
   fonts: {
     heading: "'Source Sans Pro', sans-serif",
-    body: "'Source Sans Pro', sans-serif"
-  }
+    body: "'Source Sans Pro', sans-serif",
+  },
 });

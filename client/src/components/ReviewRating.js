@@ -1,8 +1,9 @@
+/* eslint-disable prettier/prettier */
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactStars from 'react-rating-stars-component';
 import theme from '../theme.js';
-import {IoStar, IoStarHalf, IoStarOutline} from 'react-icons/io5';
+import { IoStar, IoStarHalf, IoStarOutline } from 'react-icons/io5';
 
 // https://www.npmjs.com/package/react-rating-stars-component
 
@@ -12,7 +13,7 @@ export default function ReviewRating({
   rating = 0,
   setReviewsInput = () => {},
   size = 32,
-  isLight = false
+  isLight = false,
 }) {
   const color = isLight ? theme.colors.brand.white : theme.colors.brand.black;
   const starConfig = {
@@ -22,7 +23,7 @@ export default function ReviewRating({
     activeColor: color,
     emptyIcon: <IoStarOutline />,
     halfIcon: <IoStarHalf />,
-    filledIcon: <IoStar />
+    filledIcon: <IoStar />,
   };
 
   return (
@@ -43,5 +44,5 @@ ReviewRating.propTypes = {
   size: PropTypes.number,
   isHalf: PropTypes.bool,
   edit: PropTypes.bool,
-  isLight: PropTypes.bool
+  isLight: PropTypes.bool,
 };

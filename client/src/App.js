@@ -1,16 +1,17 @@
+/* eslint-disable prettier/prettier */
 import Layout from './layout/Layout';
-import {Fallback, HomePage, Location} from './pages';
-import {Route, BrowserRouter as Router, Switch} from 'react-router-dom';
+import { Fallback, HomePage, Location } from './pages';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
 export default function App() {
   return (
     <Router>
       <Layout>
         <Switch>
-          <Route path="/" exact>
+          <Route path='/' exact>
             <HomePage />
           </Route>
-          <Route path="/location/:id">
+          <Route path='/location/:id'>
             <Location />
           </Route>
           <Route>

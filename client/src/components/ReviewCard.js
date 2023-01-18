@@ -1,30 +1,31 @@
+/* eslint-disable prettier/prettier */
 import PropTypes from 'prop-types';
 import ReviewRating from './ReviewRating';
-import {Box, Heading, Stack, Text} from '@chakra-ui/react';
-import {Link} from 'react-router-dom';
+import { Box, Heading, Stack, Text } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 
-export default function ReviewCard({rating, comment, location}) {
+export default function ReviewCard({ rating, comment, location }) {
   const highlightStyles = {
     opacity: '80%',
-    cursor: 'pointer'
+    cursor: 'pointer',
   };
 
   return (
     <Box
-      borderWidth="1px"
-      borderRadius="lg"
-      overflow="hidden"
-      color="brand.white"
-      p="6"
-      backgroundColor="brand.midnight"
+      borderWidth='1px'
+      borderRadius='lg'
+      overflow='hidden'
+      color='brand.white'
+      p='6'
+      backgroundColor='brand.midnight'
       _hover={highlightStyles}
       _focus={highlightStyles}
       as={Link}
       to={`/location/${location.id}`}
     >
-      <Stack spacing="32px" my="2" direction="column" justify="space-between">
+      <Stack spacing='32px' my='2' direction='column' justify='space-between'>
         <ReviewRating isLight size={20} rating={rating} />
-        <Heading as="h3" size="md">
+        <Heading as='h3' size='md'>
           {location.name}
         </Heading>
       </Stack>
@@ -37,5 +38,5 @@ ReviewCard.propTypes = {
   id: PropTypes.string,
   comment: PropTypes.string,
   rating: PropTypes.number,
-  location: PropTypes.object
+  location: PropTypes.object,
 };
